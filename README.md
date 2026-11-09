@@ -2,6 +2,8 @@
 
 UrbanCart is a responsive MERN bookstore prototype for browsing physical books and placing simulated orders. It implements the workflows described in the supplied project outline: customer accounts, search and filters, book details, cart, delivery details, checkout, order history, and protected administration for books, categories, inventory, and order status.
 
+**Live demo:** [urbancart-books.onrender.com](https://urbancart-books.onrender.com). Register a customer account to place a simulated order. The administrator uses `admin@urbancart.test` and the private `ADMIN_PASSWORD` in the local `.env`; demo passwords shown below apply only to the in-memory or local MongoDB setup.
+
 ## Quick start
 
 Requirements: Node.js 20.19+ and npm.

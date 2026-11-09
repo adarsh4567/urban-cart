@@ -15,6 +15,7 @@ Run `npm test` for API integration tests and `npm run build` for the frontend co
 | React production build | Pass |
 | Desktop storefront walkthrough in Chrome | Pass: home, sign-in, book detail, add to bag, checkout, order history, and admin dashboard |
 | 400 px mobile preview in Chrome | Pass: storefront, navigation, and access message fit the viewport |
+| Hosted Render and Atlas flow | Pass: homepage 200, MongoDB health, 19 books, customer registration, checkout, persisted order history, admin order list, and status update to Packed |
 
 Four automated tests use the in-memory demo adapter with real HTTP requests. A fifth test uses a local single-node MongoDB replica set and verifies a concurrent purchase and transaction rollback. Run it with `MONGODB_TEST_URI='mongodb://127.0.0.1:27017/urbancart_test?replicaSet=rs0&directConnection=true' npm test` after starting the replica set. Without that variable, the MongoDB test is skipped.
 

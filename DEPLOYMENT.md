@@ -14,6 +14,6 @@ The service builds with `npm ci --include=dev && npm run build` and starts with 
 
 ## 3. Verify
 
-Open the service's `https://...onrender.com` URL and check `/api/health` for `{ "ok": true, "mode": "mongodb" }`. Register a reader, browse and search books, add one to the cart, submit a simulated order, and inspect order history. Sign in with the configured admin account, confirm that the order appears, update its status, and verify the stock decreased. Refresh the page to confirm that the order persists.
+Open [urbancart-books.onrender.com](https://urbancart-books.onrender.com) and check `/api/health` for `{ "ok": true, "mode": "mongodb" }`. Register a reader, browse and search books, add one to the cart, submit a simulated order, and inspect order history. Sign in with the configured admin account, confirm that the order appears, update its status, and verify the stock decreased. Refresh the page to confirm that the order persists.
 
 The free Render service sleeps after inactivity and may take about a minute to wake. Atlas Free clusters can pause after 30 days of inactivity; resume the cluster in Atlas if needed. No live payment is taken. Monitor each provider's free-tier usage and do not enable paid add-ons. Official current limits: [Render free services](https://render.com/docs/free) and [Atlas Free clusters](https://www.mongodb.com/docs/atlas/reference/free-shared-limitations/).
