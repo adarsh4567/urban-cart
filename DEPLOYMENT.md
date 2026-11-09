@@ -10,7 +10,7 @@ Create a **Free** cluster in Atlas. Create a database user with read and write a
 
 Push only the tracked project files to a GitHub repository. In Render, create a Blueprint from that repository's `render.yaml`. Confirm the web service uses the **Free** plan. During initial Blueprint creation, enter the Atlas connection string for `MONGODB_URI` and a private administrator password of at least 12 characters for `ADMIN_PASSWORD`. Render generates `JWT_SECRET`. `ADMIN_EMAIL` defaults to `admin@urbancart.test`.
 
-The service builds with `npm ci && npm run build` and starts with `npm start`. `NODE_ENV=production` requires MongoDB and valid secrets, so it cannot silently fall back to ephemeral storage. The first start seeds 19 books, categories, and the configured admin account. Subsequent restarts reuse the database and keep the configured admin password current. Use the same `ADMIN_PASSWORD` value as your local `.env` if you want the local and hosted administrator login to match.
+The service builds with `npm ci --include=dev && npm run build` and starts with `npm start`. `NODE_ENV=production` requires MongoDB and valid secrets, so it cannot silently fall back to ephemeral storage. The first start seeds 19 books, categories, and the configured admin account. Subsequent restarts reuse the database and keep the configured admin password current. Use the same `ADMIN_PASSWORD` value as your local `.env` if you want the local and hosted administrator login to match.
 
 ## 3. Verify
 
