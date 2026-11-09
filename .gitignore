@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+.DS_Store
+UrbanCart_Abstract_and_Project_Outline.docx
+PLAN.md
+REPORT_DRAFT.md

@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: urbancart-books
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 24.21.0
+      - key: MONGODB_URI
+        sync: false
+      - key: MONGODB_DB_NAME
+        value: urbancart
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_EMAIL
+        value: admin@urbancart.test
+      - key: ADMIN_PASSWORD
+        sync: false

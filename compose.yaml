@@ -1,0 +1,11 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: urbancart-mongo
+    command: ["mongod", "--replSet", "rs0", "--bind_ip_all"]
+    ports:
+      - "27017:27017"
+    volumes:
+      - urbancart_mongo:/data/db
+volumes:
+  urbancart_mongo:
